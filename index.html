@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>VisionAI — AI Image Generator</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header class="navbar">
+    <div class="logo">
+      <span>✦</span> VisionAI
+    </div>
+
+    <a href="#generator" class="nav-btn">Create Image</a>
+  </header>
+
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero">
+
+      <div class="badge">
+        ✦ AI IMAGE GENERATOR
+      </div>
+
+      <h1>
+        Turn your imagination<br>
+        into <span>images.</span>
+      </h1>
+
+      <p>
+        Describe anything you can imagine and create a unique AI-generated
+        image from your prompt.
+      </p>
+
+    </section>
+
+
+    <!-- GENERATOR -->
+    <section class="generator" id="generator">
+
+      <div class="generator-card">
+
+        <div class="card-top">
+          <div>
+            <h2>Create an Image</h2>
+            <p>Describe the image you want to generate.</p>
+          </div>
+
+          <div class="status">
+            <span></span> Ready
+          </div>
+        </div>
+
+
+        <!-- PROMPT -->
+        <div class="input-group">
+
+          <label for="prompt">Your Prompt</label>
+
+          <textarea
+            id="prompt"
+            placeholder="Example: A futuristic city at night, cinematic lighting, ultra realistic, detailed architecture..."
+          ></textarea>
+
+        </div>
+
+
+        <!-- SETTINGS -->
+        <div class="settings">
+
+          <div class="setting">
+            <label>Style</label>
+
+            <select id="style">
+              <option>Realistic</option>
+              <option>Cinematic</option>
+              <option>Anime</option>
+              <option>Digital Art</option>
+              <option>3D Render</option>
+              <option>Illustration</option>
+            </select>
+          </div>
+
+
+          <div class="setting">
+            <label>Aspect Ratio</label>
+
+            <select id="ratio">
+              <option value="1:1">1 : 1</option>
+              <option value="16:9">16 : 9</option>
+              <option value="9:16">9 : 16</option>
+              <option value="4:3">4 : 3</option>
+            </select>
+          </div>
+
+
+          <div class="setting">
+            <label>Quality</label>
+
+            <select id="quality">
+              <option>Standard</option>
+              <option>High</option>
+            </select>
+          </div>
+
+        </div>
+
+
+        <!-- GENERATE BUTTON -->
+        <button class="generate-btn" id="generateBtn">
+          <span>✦</span>
+          Generate Image
+        </button>
+
+
+        <p class="api-note">
+          Your image will be generated using an AI image-generation API.
+        </p>
+
+      </div>
+
+
+      <!-- RESULT -->
+      <div class="result-card">
+
+        <div class="result-header">
+          <div>
+            <h2>Generated Image</h2>
+            <p id="resultStatus">Your creation will appear here.</p>
+          </div>
+        </div>
+
+
+        <div class="image-container" id="imageContainer">
+
+          <div class="placeholder">
+
+            <div class="placeholder-icon">✦</div>
+
+            <h3>Your image will appear here</h3>
+
+            <p>
+              Enter a prompt above and click Generate Image.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div class="image-actions">
+
+          <button id="downloadBtn" disabled>
+            ↓ Download
+          </button>
+
+          <button id="regenerateBtn" disabled>
+            ↻ Regenerate
+          </button>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- EXAMPLES -->
+    <section class="examples">
+
+      <div class="section-title">
+        <p>GET INSPIRED</p>
+        <h2>Try these prompts</h2>
+      </div>
+
+
+      <div class="prompt-grid">
+
+        <button class="prompt-card"
+          data-prompt="A futuristic megacity at night, enormous skyscrapers, flying vehicles, cinematic lighting, ultra realistic">
+          <span>🌃</span>
+          <strong>Future City</strong>
+          <small>Futuristic cinematic world</small>
+        </button>
+
+
+        <button class="prompt-card"
+          data-prompt="A mysterious ancient temple hidden inside a dense jungle, dramatic sunlight, realistic environment, cinematic photography">
+          <span>🏛️</span>
+          <strong>Ancient Temple</strong>
+          <small>Mysterious jungle discovery</small>
+        </button>
+
+
+        <button class="prompt-card"
+          data-prompt="A futuristic luxury sports car parked in a neon-lit city, rain reflections, cinematic photography, highly detailed">
+          <span>🏎️</span>
+          <strong>Future Car</strong>
+          <small>Luxury automotive concept</small>
+        </button>
+
+
+        <button class="prompt-card"
+          data-prompt="An astronaut standing on an alien planet, giant moons in the sky, realistic landscape, cinematic atmosphere">
+          <span>🚀</span>
+          <strong>Alien World</strong>
+          <small>Explore another planet</small>
+        </button>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <footer>
+    <p>© 2026 VisionAI · AI Image Generator</p>
+  </footer>
+
+
+  <script src="script.js"></script>
+
+</body>
+            </html>
